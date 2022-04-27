@@ -2,7 +2,7 @@
 
 Music Player là một Desktop App về trình nghe nhạc trên Window được xây dựng bằng công nghệ .Net Core
 
-![Music Player](https://github.com/vinh2112/music-player-v2/blob/main/Music%20Player%20v2/assets/home_light.png)
+![Music Player](https://github.com/vinh2112/music-player-v2/blob/main/Music%20Player%20v2/assets/main.png)
 
 ### Hướng dẫn chạy The CINEMA
 
