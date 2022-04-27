@@ -1,0 +1,157 @@
+﻿<Window x:Class="Music_Player_v2.MP3Mode"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Music_Player_v2"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d" Title="Music Player" Height="420" Width="280" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="{x:Null}">
+    <Grid Background="{x:Null}" MouseDown="Grid_MouseDown">
+        <materialDesign:Card Margin="5" UniformCornerRadius="5" Background="Transparent">
+            <StackPanel>
+                <StackPanel.Background>
+                    <LinearGradientBrush StartPoint="0.1,0" EndPoint="0.3,1">
+                        <GradientStop Color="#33dfdfdf" Offset="1"/>
+                        <GradientStop Color="#44000000" Offset="0"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <StackPanel Height="40" Orientation="Horizontal">
+                            <Button x:Name="btnExit" Style="{StaticResource MaterialDesignFloatingActionButton}" Background="#FF4443" Width="10" Height="10"
+                                            BorderBrush="{x:Null}" Margin=" 15 0 0 0" Click="btnExit_Click">
+
+                            </Button>
+                            <Button Name="btnMP3Mode" Style="{StaticResource MaterialDesignFloatingActionButton}" Background="#FFBE00" Width="10" Height="10" 
+                                            BorderBrush="{x:Null}" Margin=" 7 0 0 0" Click="btnMP3Mode_Click">
+
+                            </Button>
+                            <Button Name="btnMinimize" Style="{StaticResource MaterialDesignFloatingActionButton}" Background="#00D646" Width="10" Height="10" 
+                                            BorderBrush="{x:Null}" Margin=" 7 0 0 0" Click="btnMinimize_Click">
+
+                            </Button>
+                        </StackPanel>
+                        
+                        <materialDesign:PopupBox HorizontalAlignment="Right" StaysOpen="True" PlacementMode="BottomAndAlignRightEdges" Margin="0 0 10 0">
+                            <materialDesign:PopupBox.ToggleContent>
+                                <materialDesign:PackIcon Kind="Menu" Foreground="#FFFFFF" Width="30" Height="30"/>
+                            </materialDesign:PopupBox.ToggleContent>
+
+                            <StackPanel>
+                                <DockPanel Width="120" Margin="10 0" VerticalAlignment="Center">
+                                    <Button Name="Volume" Style="{StaticResource MaterialDesignIconForegroundButton}" Width="30" Height="30"
+                                            Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#DDFFFFFF" Margin="0 0 5 0" Click="Volume_Click">
+                                        <materialDesign:PackIcon Name="VolumeIcon" Kind="VolumeHigh"  Width="20" Height="20"/>
+                                    </Button>
+                                    <Slider x:Name="SliderVolume" Value="0.1" Maximum="1"  Foreground="#1DB954" IsMoveToPointEnabled="True" VerticalAlignment="Center" ValueChanged="SliderVolume_ValueChanged"/>
+                                </DockPanel>
+                            </StackPanel>
+                        </materialDesign:PopupBox>
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <Image x:Name="ThumbnailSong" IsEnabled="False" Source="Resources/no-cover.png" Width="200" Height="200">
+                            <Image.Clip>
+                                <EllipseGeometry
+                                      RadiusX="100"
+                                      RadiusY="100"
+                                      Center="100,100"/>
+                            </Image.Clip>
+                            
+                            <Image.RenderTransform>
+                                <RotateTransform CenterX="100" CenterY="100"/>
+                            </Image.RenderTransform>
+
+                            <Image.Style>
+                                <Style>
+                                    <Style.Triggers>
+                                        <Trigger Property="Image.IsEnabled" Value="True">
+                                            <Trigger.EnterActions>
+                                                <BeginStoryboard Name="SpinningStoryBoard">
+                                                    <Storyboard>
+                                                        <DoubleAnimation
+                                                            Storyboard.TargetProperty="RenderTransform.Angle"
+                                                            From="0"
+                                                            To="360"
+                                                            Duration="0:0:30"
+                                                            RepeatBehavior="Forever"/>
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </Trigger.EnterActions>
+
+                                            <Trigger.ExitActions>
+                                                <RemoveStoryboard BeginStoryboardName="SpinningStoryBoard"/>
+                                            </Trigger.ExitActions>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Image.Style>
+                        </Image>
+                    </Grid>
+
+                    <Grid Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <StackPanel>
+                            <TextBlock Name="NameSong" Width="200" Text="Song Name" Foreground="#DDFFFFFF" FontWeight="SemiBold" FontSize="18" TextAlignment="Center" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis"/>
+                            <TextBlock Name="NameArtist" Width="200" Text="Artist Name" Foreground="#DFDFDF" FontWeight="Normal" FontSize="14" TextAlignment="Center" Margin="0 5 0 0" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis"/>
+                        </StackPanel>
+                    </Grid>
+
+                    <Grid Grid.Row="3">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0" VerticalAlignment="Bottom">
+                            <TextBlock Name="TimeStart" Text="0:00" Margin="15 0" Foreground="#DFDFDF" HorizontalAlignment="Left"/>
+                            <TextBlock Name="TimeEnd" Text="4:57" Margin="15 0" Foreground="#DFDFDF" HorizontalAlignment="Right"/>
+                        </Grid>
+
+                        <Grid Grid.Row="1" VerticalAlignment="Center">
+                            <DockPanel>
+                                <Slider Name="sliderProgress" Margin="15 0" Maximum="100"  Foreground="#1DB954" IsMoveToPointEnabled="True" Thumb.DragStarted="sliderProgress_DragStarted" Thumb.DragCompleted="sliderProgress_DragCompleted"/>
+                            </DockPanel>
+                        </Grid>
+                    </Grid>
+
+                    <Grid Grid.Row="4">
+                        <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Button Name="Shuffle" Style="{StaticResource MaterialDesignIconForegroundButton}" Width="30" Height="30"
+                                            Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#DDFFFFFF" Margin="10 0 10 0" Click="Shuffle_Click">
+                                <materialDesign:PackIcon Kind="ShuffleVariant"  Width="18" Height="18"/>
+                            </Button>
+                            <Button Name="PreviousSong" Style="{StaticResource MaterialDesignIconForegroundButton}" Width="30" Height="30"
+                                            Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#DDFFFFFF" Margin="10 0 10 0" Click="PreviousSong_Click">
+                                <materialDesign:PackIcon Kind="SkipPrevious"  Width="20" Height="20"/>
+                            </Button>
+                            <Button x:Name="btnPlay" Style="{StaticResource MaterialDesignFloatingActionButton}" Width="35" Height="35"
+                                            Background="{x:Null}" BorderBrush="#DDFFFFFF" Foreground="#DDFFFFFF" Margin="10 0 10 0" Click="btnPlay_Click">
+                                <materialDesign:PackIcon Kind="Play" Width="20" Height="20"/>
+                            </Button>
+                            <Button x:Name="btnPause" Style="{StaticResource MaterialDesignFloatingActionButton}" Width="35" Height="35"
+                                            Background="{x:Null}" BorderBrush="#DDFFFFFF" Foreground="#DDFFFFFF" Margin="10 0 10 0" Visibility="Collapsed" Click="btnPause_Click">
+                                <materialDesign:PackIcon Kind="Pause" Width="20" Height="20"/>
+                            </Button>
+                            <Button Name="NextSong" Style="{StaticResource MaterialDesignIconForegroundButton}" Width="30" Height="30"
+                                            Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#DDFFFFFF" Margin="10 0 10 0" Click="NextSong_Click">
+                                <materialDesign:PackIcon Kind="SkipNext" Width="20" Height="20"/>
+                            </Button>
+                            <Button Name="Loop" Style="{StaticResource MaterialDesignIconForegroundButton}" Width="30" Height="30"
+                                            Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#DDFFFFFF" Margin="10 0 10 0" Click="Loop_Click">
+                                <materialDesign:PackIcon Kind="RepeatVariant"  Width="20" Height="20"/>
+                            </Button>
+                        </WrapPanel>
+                    </Grid>
+                </Grid>
+            </StackPanel>
+        </materialDesign:Card>
+    </Grid>
+</Window>

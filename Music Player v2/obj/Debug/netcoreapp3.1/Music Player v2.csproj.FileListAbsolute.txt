@@ -1,0 +1,77 @@
+E:\8. MyProject\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Music Player v2.csprojAssemblyReference.cache
+E:\8. MyProject\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+E:\8. MyProject\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\App.g.cs
+E:\8. MyProject\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Music Player v2_MarkupCompile.cache
+E:\8. MyProject\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Music Player v2_MarkupCompile.lref
+E:\8. MyProject\Music Player v2\Music Player v2\bin\Debug\netcoreapp3.1\Music Player v2.exe
+E:\8. MyProject\Music Player v2\Music Player v2\bin\Debug\netcoreapp3.1\Music Player v2.deps.json
+E:\8. MyProject\Music Player v2\Music Player v2\bin\Debug\netcoreapp3.1\Music Player v2.runtimeconfig.json
+E:\8. MyProject\Music Player v2\Music Player v2\bin\Debug\netcoreapp3.1\Music Player v2.runtimeconfig.dev.json
+E:\8. MyProject\Music Player v2\Music Player v2\bin\Debug\netcoreapp3.1\Music Player v2.dll
+E:\8. MyProject\Music Player v2\Music Player v2\bin\Debug\netcoreapp3.1\Music Player v2.pdb
+E:\8. MyProject\Music Player v2\Music Player v2\bin\Debug\netcoreapp3.1\MaterialDesignColors.dll
+E:\8. MyProject\Music Player v2\Music Player v2\bin\Debug\netcoreapp3.1\MaterialDesignThemes.Wpf.dll
+E:\8. MyProject\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\MainWindow.baml
+E:\8. MyProject\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Music Player v2.g.resources
+E:\8. MyProject\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Music Player v2.AssemblyInfoInputs.cache
+E:\8. MyProject\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Music Player v2.AssemblyInfo.cs
+E:\8. MyProject\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Music Player v2.csproj.CoreCompileInputs.cache
+E:\8. MyProject\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Music Player v2.csproj.CopyComplete
+E:\8. MyProject\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Music Player v2.dll
+E:\8. MyProject\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Music Player v2.pdb
+E:\8. MyProject\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Music Player v2.genruntimeconfig.cache
+E:\8. MyProject\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\App.baml
+E:\8. MyProject\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Music_Player_v2.Properties.Resources.resources
+E:\8. MyProject\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Music Player v2.csproj.GenerateResource.cache
+E:\8. MyProject\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\UCSong.g.cs
+E:\8. MyProject\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\UCSong.baml
+E:\8. MyProject\Music Player v2\Music Player v2\bin\Debug\netcoreapp3.1\TagLibSharp.dll
+E:\8. MyProject\Music Player v2\Music Player v2\bin\Debug\netcoreapp3.1\Ookii.Dialogs.Wpf.dll
+E:\8. MyProject\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\UCPlaylist.g.cs
+E:\8. MyProject\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\UCPlaylist.baml
+E:\8. MyProject\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Minimize.g.cs
+E:\8. MyProject\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Minimize.baml
+E:\8. MyProject\Music Player v2\Music Player v2\bin\Debug\netcoreapp3.1\WpfAnimatedGif.dll
+E:\8. MyProject\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\MP3Mode.g.cs
+E:\8. MyProject\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\MP3Mode.baml
+E:\8. MyProject\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\UCSongPlaylist.g.cs
+E:\8. MyProject\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\UCSongPlaylist.baml
+E:\8.MyProject\C#\Music Player v2\Music Player v2\bin\Debug\netcoreapp3.1\Music Player v2.exe
+E:\8.MyProject\C#\Music Player v2\Music Player v2\bin\Debug\netcoreapp3.1\Music Player v2.deps.json
+E:\8.MyProject\C#\Music Player v2\Music Player v2\bin\Debug\netcoreapp3.1\Music Player v2.runtimeconfig.json
+E:\8.MyProject\C#\Music Player v2\Music Player v2\bin\Debug\netcoreapp3.1\Music Player v2.runtimeconfig.dev.json
+E:\8.MyProject\C#\Music Player v2\Music Player v2\bin\Debug\netcoreapp3.1\Music Player v2.dll
+E:\8.MyProject\C#\Music Player v2\Music Player v2\bin\Debug\netcoreapp3.1\Music Player v2.pdb
+E:\8.MyProject\C#\Music Player v2\Music Player v2\bin\Debug\netcoreapp3.1\MaterialDesignColors.dll
+E:\8.MyProject\C#\Music Player v2\Music Player v2\bin\Debug\netcoreapp3.1\MaterialDesignThemes.Wpf.dll
+E:\8.MyProject\C#\Music Player v2\Music Player v2\bin\Debug\netcoreapp3.1\Ookii.Dialogs.Wpf.dll
+E:\8.MyProject\C#\Music Player v2\Music Player v2\bin\Debug\netcoreapp3.1\TagLibSharp.dll
+E:\8.MyProject\C#\Music Player v2\Music Player v2\bin\Debug\netcoreapp3.1\WpfAnimatedGif.dll
+E:\8.MyProject\C#\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Music Player v2.csproj.AssemblyReference.cache
+E:\8.MyProject\C#\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+E:\8.MyProject\C#\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Minimize.g.cs
+E:\8.MyProject\C#\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\MP3Mode.g.cs
+E:\8.MyProject\C#\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\UCPlaylist.g.cs
+E:\8.MyProject\C#\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\UCSong.g.cs
+E:\8.MyProject\C#\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\UCSongPlaylist.g.cs
+E:\8.MyProject\C#\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\App.g.cs
+E:\8.MyProject\C#\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Music Player v2_MarkupCompile.cache
+E:\8.MyProject\C#\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Music Player v2_MarkupCompile.lref
+E:\8.MyProject\C#\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\App.baml
+E:\8.MyProject\C#\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\MainWindow.baml
+E:\8.MyProject\C#\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Minimize.baml
+E:\8.MyProject\C#\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\MP3Mode.baml
+E:\8.MyProject\C#\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\UCPlaylist.baml
+E:\8.MyProject\C#\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\UCSong.baml
+E:\8.MyProject\C#\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\UCSongPlaylist.baml
+E:\8.MyProject\C#\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Music Player v2.g.resources
+E:\8.MyProject\C#\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Music_Player_v2.Properties.Resources.resources
+E:\8.MyProject\C#\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Music Player v2.csproj.GenerateResource.cache
+E:\8.MyProject\C#\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Music Player v2.GeneratedMSBuildEditorConfig.editorconfig
+E:\8.MyProject\C#\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Music Player v2.AssemblyInfoInputs.cache
+E:\8.MyProject\C#\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Music Player v2.AssemblyInfo.cs
+E:\8.MyProject\C#\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Music Player v2.csproj.CoreCompileInputs.cache
+E:\8.MyProject\C#\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Music Player v2.csproj.CopyComplete
+E:\8.MyProject\C#\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Music Player v2.dll
+E:\8.MyProject\C#\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Music Player v2.pdb
+E:\8.MyProject\C#\Music Player v2\Music Player v2\obj\Debug\netcoreapp3.1\Music Player v2.genruntimeconfig.cache

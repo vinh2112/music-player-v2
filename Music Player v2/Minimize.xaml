@@ -1,0 +1,96 @@
+﻿<Window x:Class="Music_Player_v2.Minimize"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Music_Player_v2"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d" Title="Music Player" Height="200" Width="300" ShowInTaskbar="False" ResizeMode="NoResize" WindowStartupLocation="Manual" WindowStyle="None" AllowsTransparency="True" Background="{x:Null}">
+
+    <Grid Name="TransGrid" MouseDown="Grid_MouseDown" Background="#01FFFFFF">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1.7*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" VerticalAlignment="Center">
+            <DockPanel>
+                <Slider Name="sliderProgress" Margin="15 0" Maximum="100"  Foreground="#1DB954" IsMoveToPointEnabled="True" Thumb.DragStarted="sliderProgress_DragStarted" Thumb.DragCompleted="sliderProgress_DragCompleted"/>
+            </DockPanel>
+        </Grid>
+
+        <Grid Grid.Row="1" VerticalAlignment="Top">
+            <StackPanel>
+                <TextBlock Name="NameSong" Width="200" Text="Song Name" Foreground="#DDFFFFFF" FontWeight="SemiBold" FontSize="18" TextAlignment="Center" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis"/>
+                <TextBlock Name="NameArtist" Width="200" Text="Artist Name" Foreground="#DDFFFFFF" FontWeight="Normal" FontSize="14" TextAlignment="Center" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="2" VerticalAlignment="Center">
+            <WrapPanel HorizontalAlignment="Center">
+                <Button Style="{StaticResource MaterialDesignIconForegroundButton}" Width="30" Height="30"
+                                            Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#DDFFFFFF" Margin="10 0 10 0" IsEnabled="False">
+                </Button>
+                <Button Name="PreviousSong" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Width="30" Height="30"
+                                            Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#DDFFFFFF" Margin="10 0 10 0" Click="PreviousSong_Click">
+                    <materialDesign:PackIcon Kind="SkipPrevious"  Width="20" Height="20"/>
+                </Button>
+                <Button x:Name="btnPlay" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Width="30" Height="30"
+                                            Background="{x:Null}" BorderBrush="#DDFFFFFF" Foreground="#DDFFFFFF" Margin="10 0 10 0" Click="btnPlay_Click">
+                    <materialDesign:PackIcon Kind="Play" Width="20" Height="20"/>
+                </Button>
+                <Button x:Name="btnPause" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Width="30" Height="30"
+                                            Background="{x:Null}" BorderBrush="#DDFFFFFF" Foreground="#DDFFFFFF" Margin="10 0 10 0" Click="btnPause_Click" Visibility="Collapsed">
+                    <materialDesign:PackIcon Kind="Pause" Width="20" Height="20"/>
+                </Button>
+                <Button Name="NextSong" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Width="30" Height="30"
+                                            Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#DDFFFFFF" Margin="10 0 10 0" Click="NextSong_Click">
+                    <materialDesign:PackIcon Kind="SkipNext" Width="20" Height="20"/>
+                </Button>
+                <Button Name="Exit" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Width="30" Height="30"
+                                            Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#DDFFFFFF" Margin="10 0 10 0" Click="Exit_Click">
+                    <materialDesign:PackIcon Kind="ExitToApp"  Width="20" Height="20"/>
+                </Button>
+            </WrapPanel>
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <StackPanel Width="50" Height="120" Background="#01FFFFFF" HorizontalAlignment="Left" Margin="25 -41 10 10" Panel.ZIndex="100">
+                <Button Name="Volume" Style="{StaticResource MaterialDesignIconButton}" Width="30" Height="30"
+                                            Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#DDFFFFFF" Margin="10 0 10 0" Click="Volume_Click">
+                    <materialDesign:PackIcon Name="VolumeIcon" Kind="VolumeHigh"  Width="18" Height="18"/>
+                </Button>
+                <Slider Height="0" x:Name="SliderVolume" Value="0.1" Maximum="1"  Foreground="#1DB954" IsMoveToPointEnabled="True" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" ValueChanged="SliderVolume_ValueChanged">
+                    <Slider.LayoutTransform>
+                        <ScaleTransform ScaleY="-1"/>
+                    </Slider.LayoutTransform>
+                </Slider>
+                <StackPanel.Triggers>
+                    <EventTrigger RoutedEvent="StackPanel.MouseEnter">
+                        <BeginStoryboard>
+                            <Storyboard x:Name="ShowVolumePanel">
+                                <DoubleAnimation Storyboard.TargetName="SliderVolume" Storyboard.TargetProperty="Height"
+                                                 BeginTime="0:0:0" From="0" To="70" Duration="0:0:0.2">
+
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+
+                    <EventTrigger RoutedEvent="StackPanel.MouseLeave">
+                        <BeginStoryboard>
+                            <Storyboard x:Name="HideVolumePanel">
+                                <DoubleAnimation Storyboard.TargetName="SliderVolume" Storyboard.TargetProperty="Height"
+                                                 BeginTime="0:0:0" From="70" To="0" Duration="0:0:0.2">
+
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </StackPanel.Triggers>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

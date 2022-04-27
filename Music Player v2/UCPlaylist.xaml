@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="Music_Player_v2.UCPlaylist"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Music_Player_v2"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="300">
+
+    <Button Name="ButtonPlaylist" Style="{StaticResource MaterialDesignFlatButton}" Height="50" Width="205" Click="ButtonPlaylist_Click">
+        <TextBlock Name="lbNamePlaylist" Width="150" Text="Binz da poet" Foreground="#DDFFFFFF" Margin="-14 0 0 0" FontSize="16" VerticalAlignment="center" FontWeight="Bold" TextWrapping="NoWrap"/>
+        <Button.ContextMenu>
+            <ContextMenu FontWeight="Medium">
+                <MenuItem Name="Rename" Header="Rename" Click="Rename_Click"/>
+                <MenuItem Name="Delete"  Header="Remove Playlist" Click="Delete_Click"/>
+            </ContextMenu>
+        </Button.ContextMenu>
+    </Button>
+</UserControl>

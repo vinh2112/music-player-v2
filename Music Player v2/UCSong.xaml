@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="Music_Player_v2.UCSong"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:gif ="http://wpfanimatedgif.codeplex.com"
+             xmlns:local="clr-namespace:Music_Player_v2"
+             mc:Ignorable="d" 
+             d:DesignHeight="70" d:DesignWidth="730">
+    <Border BorderBrush="#444444" BorderThickness="0 0 0 0.5" Width="Auto">
+        <Grid Name="Container" MouseDown="Grid_MouseDown" MouseEnter="Container_MouseEnter" MouseLeave="Container_MouseLeave" Background="#181818">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="8*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0" Margin="10">
+                <Border Width="45" Height="45" CornerRadius="5" BorderBrush="{x:Null}" Name="btnThumbnail">
+                    <Border.Background>
+                        <ImageBrush x:Name="ThumbnailSong" ImageSource="Resources/no-cover.png"/>
+                    </Border.Background>
+                </Border>
+                <Grid Cursor="Hand" Width="44" Height="44">
+                    <Border Name="BackgroundPlayingImage" CornerRadius="5" MouseLeftButtonDown="BackgroundPlayingImage_MouseLeftButtonDown">
+                        <Image Name="PlayingImage" Width="18" Height="18"/>
+                    </Border>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.2*"/>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock x:Name="lbNameSong" HorizontalAlignment="Left" VerticalAlignment="Center" MaxWidth="400" Text="Nguyên Team Đi Vào Hết" FontSize="15" Foreground="#FFFFFF" FontWeight="SemiBold" TextWrapping="NoWrap" TextTrimming="WordEllipsis"/>
+                        <TextBlock x:Name="lbNameArtist" MaxWidth="200" Text="Binz Touliver Adree Rhymastic" FontSize="12" Foreground="#999999" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="NoWrap" TextTrimming="WordEllipsis"/>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Name="DurationTime" Text="4:53" FontWeight="SemiBold" FontSize="12" Foreground="#999999" Margin="20"/>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Column="2" HorizontalAlignment="Right" Margin="0 0 10 0">
+                    <StackPanel Orientation="Horizontal">
+                        <Button Name="Karaoke" Style="{StaticResource MaterialDesignIconForegroundButton}" Width="35" Height="35"
+                    Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#999999" Click="Karaoke_Click" Visibility="Collapsed">
+                            <StackPanel>
+                                <materialDesign:PackIcon Kind="MicrophoneVariant" Width="25" Height="25"/>
+                            </StackPanel>
+                        </Button>
+
+                        <Button Name="btnAddToPlaylist" Style="{StaticResource MaterialDesignIconForegroundButton}" Width="35" Height="35"
+                    Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#999999" Click="btnAddToPlaylist_Click">
+                            <StackPanel>
+                                <materialDesign:PackIcon Kind="PlaylistMusic" Width="25" Height="25"/>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                    
+                </Grid>
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>
